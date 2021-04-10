@@ -15,11 +15,15 @@ const forecast = (latitude, longitude, callback) => {
     } else if (body.error) {
       callback("Unable to find location", undefined);
     } else {
+      // console.log(body.data[0]);
       callback(undefined, {
         temperature: body.data[0].temp,
         windSpeed: body.data[0].wind_spd,
         windDirection: body.data[0].wind_dir,
         description: body.data[0].weather.description,
+        sunrise: body.data[0].sunrise,
+        sunset: body.data[0].sunset,
+        snowfall: body.data[0].snow,
       });
     }
   });

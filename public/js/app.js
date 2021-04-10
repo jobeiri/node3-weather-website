@@ -19,7 +19,7 @@ weatherForm.addEventListener("submit", (e) => {
         console.log(data.location);
         console.log(data.forecast);
         messageOne.textContent = data.location;
-        messageTwo.textContent = `${data.forecast.description}.It is currently ${data.forecast.temperature} degrees out.`;
+        messageTwo.textContent = `${data.forecast.description}.It is currently ${data.forecast.temperature} degrees out. The sunrise is at ${data.forecast.sunrise} and the sunset is at ${data.forecast.sunset}.`;
       }
     });
   });
